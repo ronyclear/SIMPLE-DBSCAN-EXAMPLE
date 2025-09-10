@@ -1,5 +1,5 @@
   
-## DBSCAN SIMPLE EXAMPLE
+## SIMPLE DBSCAN EXAMPLE
 
 ### 思路
 - 1.准备待聚类数据data，并初始化visit_list为全0，shape与data的数据个数一直，初始化class_list为全-1(-1表示噪声，0,1,2表示类别),label=-1
@@ -16,7 +16,7 @@
 - 12.将领域内未被访问的点提取出来，将其添加至search_list后面并去重，重新赋值search_list
 -------------------
 - 总体思想为：
-- 找到一个领域内点数大于minpts的点，修改内点的类别，然后遍历领域内点列表search_list，遍历的点冲search中去除，
+- 找到一个领域内点数大于minpts的点，修改内点的类别，然后遍历领域内点列表search_list，遍历的点从search_list中去除，
 - 判断内点是否是核心，是的话则将内心的联通点叠加到search_list后面并去重.
 
 ### HOW TO RUN?  
